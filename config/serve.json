@@ -1,0 +1,6 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "initialPage": "https://jay0808.sharepoint.com/sites/Jaydeep?debug=true&noredir=true&debugManifestsFile=https://localhost:4321/temp/manifests.js"
+}

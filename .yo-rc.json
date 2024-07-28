@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.15.0",
+    "libraryName": "sp-fx-graph-api",
+    "libraryId": "545ca108-01fa-4c07-ba16-0a72efb94fe4",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "SPFx graph api",
+    "solutionShortDescription": "SPFx graph api description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
