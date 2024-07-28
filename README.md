@@ -48,4 +48,16 @@
    3) Packahe the solution
       ##
           gulp package-solution --ship
+
+# Graph API setup
+##
+   ```javascript
+   protected onInit(): Promise<void> {
+      this._environmentMessage = this._getEnvironmentMessage();
+      
+      return super.onInit();
+   }
+   ```
+   ```javascript
+   
    
