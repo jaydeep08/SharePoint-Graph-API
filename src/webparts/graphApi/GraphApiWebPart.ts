@@ -11,6 +11,7 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'GraphApiWebPartStrings';
 import GraphApi from './components/GraphApi';
 import { IGraphApiProps } from './components/IGraphApiProps';
+import { initGraph } from './helper/graphConfig';
 
 export interface IGraphApiWebPartProps {
   description: string;
@@ -36,10 +37,20 @@ export default class GraphApiWebPart extends BaseClientSideWebPart<IGraphApiWebP
     ReactDom.render(element, this.domElement);
   }
 
+  // protected onInit(): Promise<void> {
+  //   this._environmentMessage = this._getEnvironmentMessage();
+
+  //   return super.onInit();
+  // }
   protected onInit(): Promise<void> {
     this._environmentMessage = this._getEnvironmentMessage();
-
-    return super.onInit();
+  
+    return super.onInit().then(_ => {
+      return this.context.msGraphClientFactory.getClient('3').then((client) => {
+        initGraph(client, this.context);
+        // createListFile();
+      });
+    });
   }
 
   private _getEnvironmentMessage(): string {
