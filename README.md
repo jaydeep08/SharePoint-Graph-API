@@ -1,13 +1,11 @@
 # SharePoint-Graph-APIs
 ## Enable SharePoint site app-catalog
    1) Download and install *SharePoint Online Management Shell* from https://www.microsoft.com/en-us/download/details.aspx?id=35588
-   2) Open *SharePoint Online Management Shell* and connect with Sharepoint online site, use commands
+   2) Run *Power shell* as Administrator and connect with Sharepoint online site, use commands
       ##
           Connect-SPOService -Url https://jay0808-admin.sharepoint.com
-   3) Install *SharePointPnPPowerShellOnline*
-      ##
-          Install-Module SharePointPnPPowerShellOnline
-   4) Enable app catalog on site *https://jay0808.sharepoint.com/sites/Jaydeep*
+   
+   3) Enable app catalog on site *https://jay0808.sharepoint.com/sites/Jaydeep*
       ##
           Add-SPOSiteCollectionAppCatalog -Site "https://jay0808.sharepoint.com/sites/Jaydeep"
 
